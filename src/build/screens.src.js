@@ -1526,11 +1526,11 @@ function OptSlider({ title = "BetMaker" }) {
   };
   return (
     <div className="bm sec bm--card">
-      <Hd icon={false} name={title} subTx={<>Based on <b>users popular bets</b></>} tip="BetMaker takes popular selections that betPawa users are betting on and builds a betslip that matches the total odds you enter. You can regenerate as many times as you want." />
+      <Hd icon={false} name={title} subTx={<>Based on <b>users popular bets</b></>} tip={title + " takes popular selections that betPawa users are betting on and builds a betslip that matches the total odds you enter. You can regenerate as many times as you want."} />
       <div className="bmctl bmctl--row">
         <OddsSlider value={target} onChange={setTarget} />
         <button className={"bmgo" + (busy ? " is-busy" : "")} onClick={run} disabled={busy || !target}>
-          <Ic name={busy ? "RotateCw" : "Sparkles"} size={17} />{busy ? "Generating Betslip…" : "Generate Betslip"}
+          <Ic name={busy ? "RotateCw" : "Sparkles"} size={17} />{busy ? (title === "BetMaker" ? "Generating Betslip…" : "Generating Lucky Slip…") : title === "BetMaker" ? "Generate Betslip" : "Generate Lucky Slip"}
         </button>
       </div>
     </div>);

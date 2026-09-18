@@ -3,15 +3,16 @@
 **Live:** https://jimpawa.github.io/betmaker-lucky-slip/
 
 `index.html` — prototype **3 · Odds field — "Lucky Slip"** from
-`BetMaker Direct (standalone) (2).html`, rebuilt as a normal responsive web
+`BetMaker Direct (standalone) (4).html`, rebuilt as a normal responsive web
 page: no device frame, fills the viewport at any size. Single self-contained
 file (~1.1 MB) with fonts, icon sprite, React and app code inlined.
 
 ## Relationship to `betmaker-odds-field`
 In the source bundle option 3 is the **same** `OptSlider` component as option
 2, mounted as `<OptSlider title="Lucky Slip" />`. The section heading
-("BetMaker" → "Lucky Slip") is the only difference — same odds input, same
-generator, same betslip behaviour.
+("BetMaker" → "Lucky Slip") differs, and — as of bundle (4) — the CTA
+("Generate Lucky Slip" / "Generating Lucky Slip…") and the info tooltip,
+which now name Lucky Slip. Same odds input, same generator, same betslip.
 
 ## What changed vs. the source bundle
 - Only `optLucky` is mounted; the review-page shell and the other two

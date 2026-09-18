@@ -2709,7 +2709,7 @@ function OptSlider({
     icon: false,
     name: title,
     subTx: /*#__PURE__*/React.createElement(React.Fragment, null, "Based on ", /*#__PURE__*/React.createElement("b", null, "users popular bets")),
-    tip: "BetMaker takes popular selections that betPawa users are betting on and builds a betslip that matches the total odds you enter. You can regenerate as many times as you want."
+    tip: title + " takes popular selections that betPawa users are betting on and builds a betslip that matches the total odds you enter. You can regenerate as many times as you want."
   }), /*#__PURE__*/React.createElement("div", {
     className: "bmctl bmctl--row"
   }, /*#__PURE__*/React.createElement(OddsSlider, {
@@ -2722,7 +2722,7 @@ function OptSlider({
   }, /*#__PURE__*/React.createElement(Ic, {
     name: busy ? "RotateCw" : "Sparkles",
     size: 17
-  }), busy ? "Generating Betslip…" : "Generate Betslip")));
+  }), busy ? title === "BetMaker" ? "Generating Betslip…" : "Generating Lucky Slip…" : title === "BetMaker" ? "Generate Betslip" : "Generate Lucky Slip")));
 }
 Promise.resolve(window.__spriteReady).then(() => {
   const el = document.getElementById("app");

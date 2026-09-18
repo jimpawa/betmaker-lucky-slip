@@ -1,7 +1,7 @@
 const fs = require('fs');
-const Babel = require('./assets/3471ce72-fa02-4a51-9b55-c3f6994b7a9a.js');
+const Babel = require('./assets/7dffd603-a9ba-448f-85eb-fc73f43f5f71.js');
 for (const [src, out] of [
-  ['assets/2a98395e-77f7-4722-a958-9bf98a664eb4.js', 'build/components.js'],
+  ['assets/bf8f3593-177b-4742-809f-eca8b57998d3.js', 'build/components.js'],
   ['build/screens.src.js', 'build/screens.js'],
 ]) {
   const res = Babel.transform(fs.readFileSync(src, 'utf8'), { presets: ['react'], sourceType: 'script', compact: false });

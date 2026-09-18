@@ -5,11 +5,11 @@ styles = re.findall(r'<style>(.*?)</style>', tpl, re.S)
 assert len(styles) == 4
 
 fonts = {
-    "1f6591a3-2965-49e0-af8f-3123799fad1f": "assets/1f6591a3-2965-49e0-af8f-3123799fad1f.ttf",
-    "dc8f8a35-0c8f-4e8e-9aa7-c1e78db91e6c": "assets/dc8f8a35-0c8f-4e8e-9aa7-c1e78db91e6c.ttf",
+    "4d23a48e-8bfc-482b-83c7-62d0e309d5a4": "assets/4d23a48e-8bfc-482b-83c7-62d0e309d5a4.ttf",
+    "eacafdad-7557-475d-9c57-6994dd67755e": "assets/eacafdad-7557-475d-9c57-6994dd67755e.ttf",
 }
 css0 = styles[0]
-for drop in ('6b7808d5-c26c-4df9-be4a-ffa4abdba36b', '5254c329-ce9b-4472-a535-3142492b009b'):
+for drop in ('e03bd276-3f36-46ea-8947-5dd17d3f2149', 'fcf3352b-b440-4827-9366-a68cc3882a19'):
     css0 = re.sub(r'@font-face \{[^}]*?' + drop + r'[^}]*?\}\n?', '', css0, flags=re.S)
 for uuid, path in fonts.items():
     css0 = css0.replace(uuid, "data:font/ttf;base64," + base64.b64encode(open(path,'rb').read()).decode())
@@ -17,7 +17,7 @@ styles[0] = css0
 
 read = lambda p: open(p, encoding='utf-8').read()
 sprite   = read('assets/sprite.svg')
-data_js  = read('assets/6339cfb0-0337-4877-8adf-bbc0471d9a85.js')
+data_js  = read('assets/064a7707-e08b-4c28-98dd-4506b17b5e5d.js')
 comp_js  = read('build/components.js')
 scrn_js  = read('build/screens.js')
 react    = read('lib/react.min.js')
